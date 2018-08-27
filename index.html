@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Fetch</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="./css/styles.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div id="pattern"></div>
+
+  <script src="./js/init.js"></script>
+
+  <script>
+
+    //=================  bouton déplier / replier  =========================
+
+    function Accordeon(el) {
+      let getLi = el.parentElement.nextElementSibling;
+      let liDisplay = getLi.style.display;
+
+       if (liDisplay == 'none') {
+        let nbrLi = document.querySelectorAll('.no');
+        for (let t = 0; t < nbrLi.length; t++) {
+          document.querySelectorAll('.no')[t].style.display = 'none';
+          getLi.style.display = 'block';
+        }
+      } else {  
+        getLi.style.display = 'none';
+      }
+    }
+
+//=========================   end   =========================
+
+  </script>
+</body>
+
+</html>
